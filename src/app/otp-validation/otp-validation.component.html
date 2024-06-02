@@ -1,0 +1,48 @@
+<div class="main">
+  <section class="otp-content">
+    <div class="otp-content-lt"></div>
+    <div class="otp-content-rt">
+      <div class="otp-box">
+        <form class="otp-form" [formGroup]="verifyOtpForm" (ngSubmit)="onSubmit()">
+          <div class="logo-wrapper">
+            <img src="../../assets/Images/logo.svg" alt="Rishabh Software">
+            <span>Meal Facility</span>
+          </div>
+          <h3 class="otp-head">Forgot Password</h3>
+          <p class="otp-text">Enter OTP and Create new password for your account.</p>
+
+          <div class="form-group">
+            <label class="control-label">Enter OTP</label>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input matInput placeholder="Enter OTP" id="otp" formControlName="otp"
+                [type]="hideOtp ? 'password' : 'text'">
+              <mat-icon matSuffix class="visibility-icon" (click)="toggleVisibility()">{{ hideOtp ?
+                'visibility_off' : 'visibility' }}</mat-icon>
+
+              <mat-error *ngIf="f['otp'].dirty && f['otp'].errors">
+                <span *ngIf="f['otp'].errors['required']">OTP is required.</span>
+                <span *ngIf="f['otp'].errors['minlength'] || f['otp'].errors['maxlength']">OTP must be 4 digits
+                  long.</span>
+                <span *ngIf="f['otp'].errors['pattern']">OTP must contain only digits.</span>
+              </mat-error>
+
+            </mat-form-field>
+
+            <div class="timer">
+              <p>OTP is valid till {{ minutes }}:{{ seconds | number: '2.0' }}</p>
+            </div>
+
+            <div class="form-group btn-container">
+              <button type="submit" class="btn btn-xl btn-primary" mat-raised-button color="primary"
+                [disabled]="verifyOtpForm.invalid || timeUp">
+                Verify OTP
+              </button>
+            </div>
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+</div>

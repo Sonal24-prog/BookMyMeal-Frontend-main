@@ -1,0 +1,51 @@
+  <app-header></app-header>
+  <div class="container" style="margin-top:50px;">
+   
+    <div class="calendar">
+
+      <h1>Calender</h1>
+      <mat-calendar [dateClass]="dateClass" [dateFilter]="myDateFilter" [dateFilter]="preventSelection" [(selected)]="selectedDate" (selectedChange)="onDateChange($event)" #picker></mat-calendar>
+    </div>
+    <div class="booking">
+      <h2><i class="fa-solid fa-utensils"></i><i class="fa-solid fa-bowl-food"></i>Meal of the Day</h2>
+      <div *ngIf="selectedDate && !isWeekend(selectedDate)">
+      </div>
+      <div class="todaysmenu" *ngIf="currentMenu">
+        <span><h2>MENU:</h2></span>
+        <div class="menu-box">
+          <div class="menu-list">
+            <h3>Lunch</h3>
+            <ul>
+              <li *ngFor="let item of currentMenu.lunch">{{ item }}</li>
+            </ul>
+          </div>
+          <div class="menu-list">
+            <h3>Dinner</h3>
+            <ul>
+              <li *ngFor="let item of currentMenu.dinner">{{ item }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!currentMenu && !isWeekend(selectedDate)">No menu available</div>
+      <div *ngIf="isWeekend(selectedDate)">Booking is not allowed on weekends</div>
+      <div class="book-division">
+        <button (click)="openQuickBooking()" class="btn btn-danger view-booking">Quick Booking</button>
+      </div>
+      
+      <div class="book-divs">
+        <button (click)="openViewBookingDialog()" class="btn btn-danger view-booking">View Booking</button>
+      </div>
+      
+      <div class="book-div1s">
+        <button (click)="openAddBookingModal()" class="btn btn-danger book-a-meal" >
+          Book a Meal
+        </button>
+        
+      </div>
+    
+      
+    </div>
+    
+  </div>
+

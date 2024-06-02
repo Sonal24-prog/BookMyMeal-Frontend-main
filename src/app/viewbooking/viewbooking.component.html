@@ -1,0 +1,59 @@
+<!-- <div class="container">
+  <mat-card class="calendar-card">
+    <div class="calendar-container">
+      <mat-calendar [dateClass]="dateClass"></mat-calendar>
+    </div>
+    <p>Total Bookings: {{ totalBookings }}</p>
+    <div mat-dialog-actions>
+      <button mat-button (click)="closeDialog()">Close</button>
+    </div>
+  </mat-card>
+</div> -->
+<!-- viewbooking.component.html -->
+<!-- viewbooking.component.html -->
+<!-- 
+  <div class="container">
+    <mat-card class="calendar-card">
+      <div class="calendar-container">
+        <mat-calendar [dateClass]="dateClass" (selectedChange)="onDateSelected($event)">
+          <ng-template matCalendarCell let-date="date" let-dateClasses="dateClasses">
+            <div [ngClass]="dateClasses">
+              {{ date.getDate() }}
+            </div>
+          </ng-template>
+        </mat-calendar>
+      </div>
+      <p>Your Total Bookings: {{ totalBookings }}</p>
+      <div class="book-div2s">
+        <button (click)="openCancelBooking()" class="btn btn-danger book-a-meal">
+          Cancel Booking
+        </button>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button (click)="closeViewBooking()" id ="closebtn">Close</button>
+      </div>
+    </mat-card>
+  </div> -->
+
+
+  <div class="container">
+    <mat-card class="calendar-card">
+      <h2>View Bookings </h2>
+      <div class="calendar-container">
+        <mat-calendar [dateClass]="dateClass" (selectedChange)="onDateSelected($event)">
+          <ng-template matCalendarCell let-date="date" let-dateClasses="dateClasses" #picker>
+            <div [ngClass]="dateClasses" (click)="openCancelBooking(date)">
+              {{ date.getDate() }}
+            </div>
+          </ng-template>
+        </mat-calendar>
+      </div>
+      <p style="font-size: 20px;">Your Total Bookings are : {{ totalBookings }}</p>
+      <!-- Added padding and margin to the cancel booking button -->
+      <div mat-dialog-actions>
+        <button mat-raised-button color="warn" (click)="closeViewBooking()" id="closebtn">Close</button>
+      </div>
+      <span><b>NOTE : </b> <h5 style="color: red;">To cancel the booking click the date</h5></span>
+    </mat-card>
+  </div>
+  

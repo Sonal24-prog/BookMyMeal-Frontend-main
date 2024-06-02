@@ -1,0 +1,39 @@
+/* Add custom styles for the cancel booking dialog */
+.mat-dialog-container {
+    padding: 20px;
+    height: 300px; /* Add padding to the dialog container */
+  }
+  
+  mat-dialog-title {
+    color: #E23E3F; /* Set title color */
+    font-size: 24px; /* Set title font size */
+  }
+  
+  mat-dialog-content {
+    font-size: 16px; /* Set content font size */
+  }
+  
+  mat-dialog-actions {
+    justify-content: flex-end; /* Align actions to the right */
+  }
+  
+  /* Style the buttons */
+  mat-dialog-actions button {
+    margin-left: 10px; /* Add margin between buttons */
+    min-width: 100px; /* Set minimum width for buttons */
+  }
+  
+  mat-dialog-actions button:nth-child(1) {
+    color: #666666; /* Set color for the "No" button */
+  }
+  
+  mat-dialog-actions button:nth-child(2) {
+    color: #ffffff; /* Set text color for the "Yes" button */
+    background-color: #E23E3F; /* Set background color for the "Yes" button */
+  }
+  
+  mat-dialog-actions button:hover {
+    background-color: #B82E30; /* Change background color on hover */
+  }
+
+  

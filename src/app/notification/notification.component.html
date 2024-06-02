@@ -1,0 +1,13 @@
+<div class="notification-container">
+  <div class="notification-header">
+    <h3>Notification</h3>
+  </div>
+  <div *ngFor="let notification of notifications; let i = index" class="notification-item">
+    <div class="notification-content">
+      <div class="notification-text">
+        <p>{{ getNotificationMessage(notification) }}</p>
+        <!-- <span class="notification-time">{{ notification.date | date:'shortTime' }}</span> -->
+      </div>
+    </div>
+  </div>
+</div>

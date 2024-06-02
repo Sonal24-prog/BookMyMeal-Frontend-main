@@ -1,0 +1,169 @@
+/*.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+     
+}
+
+.calendar-card {
+    width: 600px; 
+    padding: 20px;
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.calendar-container {
+    text-align: center; 
+}
+
+.btncancel {
+    margin-top: 20px; 
+    position: relative; 
+    text-align: right;
+    top: 0%;
+}
+
+button {
+    margin-left: 10px; 
+}
+.booked-date .mat-calendar-body-cell-content::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .canceled-date .mat-calendar-body-cell-content::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  ::ng-deep .booked {
+    position: relative;
+  }
+  
+  ::ng-deep .custom-date-class {
+    position: relative;
+  }
+  
+  ::ng-deep .booked::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  ::ng-deep .mat-calendar-body-cell.booked-date::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(29, 173, 24);
+    border-radius: 50%;
+    transform: translateX(-50%);
+  } */
+  
+  /* ::ng-deep .booked-date .mat-calendar-body-cell-content::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  ::ng-deep .canceled-date .mat-calendar-body-cell-content::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  }
+  
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .canceled-date .mat-calendar-body-cell-content::after {
+    animation: fadeOut 2h forwards;
+  } */
+
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calendar-card {
+    width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .calendar-container {
+    text-align: center;
+  }
+  
+  .btncancel {
+    margin-top: 20px;
+    position: relative;
+    text-align: right;
+    top: 0%;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
+  /* Styles for booked and canceled dates */
+  ::ng-deep .mat-calendar-body-cell.booked-date .mat-calendar-body-cell-content {
+    background-color: green !important;
+    color: white !important;
+    border-radius: 50%;
+  }
+  
+  ::ng-deep .mat-calendar-body-cell.canceled-date .mat-calendar-body-cell-content {
+    background-color: red !important;
+    color: white !important;
+    border-radius: 50%;
+  }
+  

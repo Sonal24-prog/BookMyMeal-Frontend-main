@@ -1,0 +1,84 @@
+<body class="mt-0">
+  <div class="main">
+    <section class="login-content">
+      <div class="login-content-lt"></div>
+      <div class="login-content-rt">
+        <div class="login-box">
+          <form class="login-form" [formGroup]="signForm">
+            <div class="logo-wrapper">
+              <img src="../../assets/Images/logo.svg" alt="Rishabh Software">
+              <span>Meal Facility</span>
+            </div>
+            <h3 class="login-head">Sign Up to your account</h3>
+            <p class="login-text">Enter your credentials to access your account.</p>
+
+            <div class="form-group">
+              <label class="control-label">Email</label>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Email" id="email" formControlName="email" type="email">
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <div *ngIf="signForm.controls['email'].invalid && (signForm.controls['email'].dirty || signForm.controls['email'].touched)">
+                <div *ngIf="signForm.controls['email'].errors?.['required']">Email is required.</div>
+                <div *ngIf="signForm.controls['email'].errors?.['email']">Email is invalid.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Name</label>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Name" id="name" formControlName="name" type="text">
+                <mat-icon matSuffix>person</mat-icon>
+              </mat-form-field>
+              <div *ngIf="signForm.controls['name'].invalid && (signForm.controls['name'].dirty || signForm.controls['name'].touched)">
+                <div *ngIf="signForm.controls['name'].errors?.['required']">Name is required.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Password</label>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Password" id="password" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+                <mat-icon matSuffix class="visibility-icon" (click)="togglePasswordVisibility()">{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </mat-form-field>
+              <div *ngIf="signForm.controls['password'].invalid && (signForm.controls['password'].dirty || signForm.controls['password'].touched)">
+                <div *ngIf="signForm.controls['password'].errors?.['required']">Password is required.</div>
+                <div *ngIf="signForm.controls['password'].errors?.['lowercase']">Password must contain at least one lowercase letter.</div>
+                <div *ngIf="signForm.controls['password'].errors?.['uppercase']">Password must contain at least one uppercase letter.</div>
+                <div *ngIf="signForm.controls['password'].errors?.['special']">Password must contain at least one special character.</div>
+                <div *ngIf="signForm.controls['password'].errors?.['length']">Password must be between 4 and 8 characters.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Confirm Password</label>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Confirm Password" id="cpassword" formControlName="cpassword" [type]="hideConfirmPassword ? 'password' : 'text'">
+                <mat-icon matSuffix class="visibility-icon" (click)="toggleConfirmPasswordVisibility()">{{ hideConfirmPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </mat-form-field>
+              <div *ngIf="signForm.controls['cpassword'].invalid && (signForm.controls['cpassword'].dirty || signForm.controls['cpassword'].touched)">
+                <div *ngIf="signForm.controls['cpassword'].errors?.['required']">Confirm Password is required.</div>
+                <div *ngIf="signForm.controls['cpassword'].errors?.['confirm']">Passwords do not match.</div>
+              </div>
+            </div>
+            
+          <div class="form-group btn-container">
+            <button (click)="register()" type="submit" class="btn btn-xl btn-primary" mat-raised-button color="primary"
+              [disabled]="signForm.invalid">
+              Sign Up
+            </button>
+          </div>
+
+            <div class="form-group btn-container">
+              <p class="login"> Have an account already?
+                <a class="have-account" href="/login">Login Here</a>
+              </p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+

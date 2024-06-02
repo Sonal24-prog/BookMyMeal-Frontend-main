@@ -1,0 +1,42 @@
+.form-group {
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .custom-radio .radio-block {
+    margin-right: 2rem;
+  }
+  
+  .custom-radio .radio-block input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+  
+  .custom-radio {
+    padding: 0 1rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  /* .alert {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+  }
+  
+  .alert-info {
+    background-color: #e7f3fe;
+    color: #31708f;
+    border: 1px solid #bce8f1;
+  } */
+  
+  
+  .btn {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+  

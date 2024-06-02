@@ -1,0 +1,42 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #12264a; /* Footer background color */
+    color: white; /* Text color */
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Add shadow to separate from the content */
+  }
+  
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer .footer-block {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer .footer-block p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  .footer .social {
+    margin-left: 600px; /* Add space between copyright text and social icons */
+  }
+  
+  .footer .social a {
+    color: white; /* Social icon color */
+    text-decoration: none; /* Remove default underline */
+    margin-right: 10px; /* Add space between social icons */
+  }
+  
+  /* Adjust icon sizes if needed */
+  .footer .social i {
+    font-size: 20px;
+
+  }
+  

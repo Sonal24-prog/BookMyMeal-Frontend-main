@@ -1,0 +1,111 @@
+<!-- <h3>Meal Booking</h3>
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  <div class="modal-body">
+    <div class="form-group custom-radio">
+      <label for="bookingType">Select Booking Type</label>
+      <div class="d-flex align-content-center justify-content-start">
+        <div class="radio-block">
+          <input type="radio" id="Type1" value="Single" formControlName="bookingType" (change)="onMealTypeChange('single')" />
+          <label for="Type1" class="mr-0">Single</label>
+        </div>
+        <div class="radio-block">
+          <input type="radio" id="Type2" value="Bulk" formControlName="bookingType" (change)="onMealTypeChange('bulk')" />
+          <label for="Type2" class="mr-0">Bulk</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group custom-radio">
+      <label for="mealType">Select Category</label>
+      <div class="d-flex align-content-center justify-content-start">
+        <div class="radio-block">
+          <input type="radio" id="Category1" value="LUNCH" formControlName="mealType" />
+          <label for="Category1" class="mr-0">Lunch</label>
+        </div>
+        <div class="radio-block">
+          <input type="radio" id="Category2" value="DINNER" formControlName="mealType" />
+          <label for="Category2" class="mr-0">Dinner</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Starting Date</label>
+      <div class="input-date">
+        <input type="date" class="form-control border-right-0" placeholder="Select Date" id="SDate" formControlName="startDate" />
+        <div class="input-group-append bg-transparent">
+          <span class="input-group-text bg-transparent" id="basic-addon2"><i class="icon-calendar"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Ending Date</label>
+      <div class="input-date">
+        <input type="date" class="form-control border-right-0" placeholder="Select Date" id="demoDate" formControlName="endDate" />
+        <div class="input-group-append bg-transparent">
+          <span class="input-group-text bg-transparent" id="basic-addon2"><i class="icon-calendar"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" (click)="onCancel()">Cancel</button>
+    <button type="submit" class="btn btn-primary">Book</button>
+  </div>
+</form> -->
+
+<h3>Meal Booking</h3>
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  <div class="modal-body">
+    <div class="form-group custom-radio">
+      <label for="bookingType">Select Booking Type</label>
+      <div class="d-flex align-content-center justify-content-start">
+        <div class="radio-block">
+          <input type="radio" id="Type1" value="single" formControlName="bookingType" (change)="onMealTypeChange('single')" />
+          <label for="Type1" class="mr-0">Single</label>
+        </div>
+        <div class="radio-block">
+          <input type="radio" id="Type2" value="bulk" formControlName="bookingType" (change)="onMealTypeChange('bulk')" />
+          <label for="Type2" class="mr-0">Bulk</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group custom-radio">
+      <label for="mealType">Select Category</label>
+      <div class="d-flex align-content-center justify-content-start">
+        <div class="radio-block">
+          <input type="radio" id="Category1" value="LUNCH" formControlName="mealType" />
+          <label for="Category1" class="mr-0">Lunch</label>
+        </div>
+        <div class="radio-block">
+          <input type="radio" id="Category2" value="DINNER" formControlName="mealType" />
+          <label for="Category2" class="mr-0">Dinner</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Starting Date</label>
+      <div class="input-date">
+        <input type="date" class="form-control border-right-0" placeholder="Select Date" id="SDate" formControlName="startDate" [min]="minDate()" [max]="maxDate()" (change)="updateEndDate()" />
+        <div class="input-group-append bg-transparent">
+          <!-- <span class="input-group-text bg-transparent" id="basic-addon2"><i class="icon-calendar"></i></span> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Ending Date</label>
+      <div class="input-date">
+        <input type="date" class="form-control border-right-0" placeholder="Select Date" id="demoDate" formControlName="endDate" [min]="minDate()" [max]="maxDate()" />
+        <div class="input-group-append bg-transparent">
+          <!-- <span class="input-group-text bg-transparent" id="basic-addon2"><i class="icon-calendar"></i></span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    <button type="submit" mat-raised-button color="warn">Book</button>
+  </div>
+</form>

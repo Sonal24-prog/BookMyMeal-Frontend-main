@@ -1,0 +1,23 @@
+<div class="alert alert-info" role="alert">
+  <h2>Quick Book</h2>
+  Quick meal booking is for <strong>{{ nextDay | date: 'fullDate' }}</strong> with User ID: <strong>{{ loggedInUserId }}</strong>.
+</div>
+<form [formGroup]="bookingForm" (ngSubmit)="quickBookMeal()">
+  <div class="form-group custom-radio">
+    <label for="mealType" style="font-weight: bold;">Select Category</label>
+    <div class="d-flex align-content-center justify-content-start">
+      <div class="radio-block">
+        <input type="radio" id="Category1" value="LUNCH" formControlName="mealType" />
+        <label for="Category1" class="mr-0">Lunch</label>
+      </div>
+      <div class="radio-block">
+        <input type="radio" id="Category2" value="DINNER" formControlName="mealType" />
+        <label for="Category2" class="mr-0">Dinner</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    <button type="submit" mat-raised-button color="warn">Book</button>
+  </div>
+</form>

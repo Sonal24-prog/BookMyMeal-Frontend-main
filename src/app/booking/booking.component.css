@@ -1,0 +1,88 @@
+/* General styles for the form */
+h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.75rem; /* Increased font size */
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .form-group label {
+    font-weight: bold; /* Make labels bold */
+    font-size: 1.2rem; /* Increased font size for labels */
+  }
+  
+  .custom-radio .radio-block {
+    margin-right: 1.5rem;
+  }
+  
+  .custom-radio .radio-block input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+  
+  .custom-radio {
+    padding: 0 1rem;
+  }
+  
+  .input-date {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group-append {
+    margin-left: -1px;
+  }
+  
+  .input-group-text {
+    border-left: 0;
+  }
+  
+  .modal-body {
+    padding: 1.5rem 2rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+  }
+  
+  .btn {
+    margin-left: 0.5rem;
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  input[type="date"] {
+    width: 100%;
+    padding: 0.75rem; /* Increased padding */
+    font-size: 1rem; /* Increased font size */
+  }
+  
+  .icon-calendar {
+    font-size: 1.2rem;
+  }
+  
+  .border-right-0 {
+    border-right: 0 !important;
+  }
+  
+  .bg-transparent {
+    background-color: transparent !important;
+  }
+  
+  /* Specific styles for meal booking message */
+  .meal-booking-message {
+    font-weight: bold; /* Make the meal booking message bold */
+    color: #d9534f; /* Red color for the meal booking message */
+    font-size: 1.2rem; /* Increased font size */
+    margin-bottom: 1.5rem; /* Proper margin */
+    padding: 0.75rem 1rem; /* Proper padding */
+    border: 1px solid #d9534f; /* Border with the same color */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    background-color: #f8d7da; /* Light red background for emphasis */
+  }
+  

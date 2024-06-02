@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import '~font-awesome/css/font-awesome.css';
+@import '../src/assets/css/additionalfile.css';
+@import '../src/assets/css/bootstrap.min.css';
+@import "../src/assets/css/btns.css";
+@import '../src/assets/css/c3.min.css';
+@import '../src/assets/css/commoncolors.css';
+@import '../src/assets/css/main.css';
+
+/* @import '@fullcalendar/core/main.css';
+@import '@fullcalendar/daygrid/main.css';
+@import '@fullcalendar/timegrid/main.css';
+@import '@fullcalendar/list/main.css'; */
+
+@import 'ngx-toastr/toastr';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.pointer{
+    cursor: pointer;
+    margin: 15px 12px;
+}
+
+.hide{
+    display: none !important;
+}
+
+.success-snackbar {
+    background-color: green !important;
+    color: white !important;
+  }
+  
+.error-snackbar {
+    background-color: red !important;
+    color: white !important;
+}
+
+
